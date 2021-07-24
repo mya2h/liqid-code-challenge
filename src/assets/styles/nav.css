@@ -1,41 +1,58 @@
-.navbar {
+nav {
   width: 100%;
-  background-color: #555;
   overflow: auto;
-  height: 12vh
 }
-
-.navbar a {
-  float: left;
-  text-align: center;
+.nav{
+  background-color:#222222;
+}
+nav li {
   padding: 12px;
-  color: white;
   text-decoration: none;
+  display:inline-block;
   font-size: 17px;
+  font-family:Roboto;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
 }
 
-.navbar a:hover {
-  color: black;
+.nav a:hover{
+  color: #EF233C;
+}
+.nav .active{
+  color: #EF233C;
+}
+.nav-title{
+ float: left;
+ background-color: #EF233C;
+ margin-top: 12px;
+ margin-left: 12px;
+ border-radius: 25px 25px 25px 25px;
+}
+.nav-title img{
+  padding: 10px;
+}
+.nav-left {
+  float: left;
 }
 
-.active {
-  background-color: #04AA6D;
+.nav-right {
+  float: right;
 }
-.navbar.rightitems{
-  float:right
-}
+
 @media screen and (max-width: 500px) {
-  .navbar{
+  nav{
     height: 100vh;
-  }
-  .navbar a {
-    float: none;
     display: block;
   }
-  .rightitems{
-    float:none;   
+  nav li{
+    display: block;
   }
-  .navbar .itemseparator{
-    display: none;
+  .nav-left {
+    float: none;
+  }
+  
+  .nav-right {
+    float: none;
   }
 }

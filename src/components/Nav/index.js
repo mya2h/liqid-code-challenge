@@ -1,22 +1,35 @@
 import {AiOutlineHome} from 'react-icons/ai'
 import {BsPerson} from 'react-icons/bs'
 import {FiSettings} from 'react-icons/fi'
+import {IoExitOutline} from 'react-icons/io5'
+import mainIcon from '../../assets/images/Group 1.svg'
+import textIcon from '../../assets/images/Group 32.svg'
 import '../../assets/styles/nav.css'
+
 
 const Nav = ()=>{
     return(
-        <div className="navbar">
-            <div className="leftitems">
-                <a>Hello, LIQID!</a>
-                <a className="itemseparator">|</a>
-                <a>Logout</a>
+        <nav class="nav">
+            <div className="nav-title">
+        <img src={mainIcon}/>
             </div>
-            <div className="rightitems">
-            <a><AiOutlineHome/>Home</a>
-            <a><BsPerson/>Profile</a>
-            <a><FiSettings/>Settings</a>
-            </div>
-        </div>
+    <div class="nav-left">
+        <ul>
+
+            <li>  Hello, LIQID!  </li>
+            <li> | </li>
+            <li><a>   <IoExitOutline className="icon"/>Logout</a></li>
+        </ul>
+    </div>
+    <div class="nav-right">
+        <ul>
+
+            <li><a className="active"><AiOutlineHome className="icon"/>Home</a></li>
+            <li><a><BsPerson className="icon"/>Profile</a></li>
+            <li><a><FiSettings className="icon"/>Settings</a></li>
+        </ul>
+    </div>
+</nav>
     )
 }
 export default Nav

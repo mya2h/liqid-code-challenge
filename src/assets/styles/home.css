@@ -1,0 +1,80 @@
+.row { 
+  display: grid; 
+  grid-template-columns: 50% 50%;
+  height: 87vh;
+}
+.row .col2{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 22px;
+  padding-left: 10%;
+  padding-right: 10%;
+
+}
+.col1{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.investments{
+background: #F0F0F3;
+border-radius: 0 0 0 24px;
+align-items: center;
+}
+.stock{
+background: #F0F0F3;
+align-items: center;
+
+}
+.col2 h3{
+  font: italic normal 300 25px/33px Roboto;
+  color: #EF233C;
+  padding-left: 16px;
+  padding-right: 2px;
+}
+.col2 p{
+  font: normal normal 300 16px/24px Roboto;
+  padding-left: 16px;
+  padding-right: 2px;
+}
+.stock .btn{
+  background-color: #EF233C;
+  border-radius: 0px 0px 0px 12px;
+  border-color:#EF233C ;
+  color: white;
+  width: 80%;
+  height: 7vh;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-top: 70px;
+  margin-bottom: 10px;
+}
+.column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.col1content h2{
+  font:italic normal 300 25px/33px Roboto;
+  color: #FFFFFF;
+}
+.col1content p{
+  font: normal normal 300 16px/24px Roboto;
+  color: #FFFFFF;
+}
+.row .col1{
+ background: #0D455D;
+
+}
+
+
+@media screen and (max-width: 500px) {
+ .row{
+   display: block;
+ }
+ .row .col2{
+   display: block;
+ }
+}
