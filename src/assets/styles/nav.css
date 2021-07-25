@@ -1,6 +1,9 @@
 nav {
   width: 100%;
   overflow: auto;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 .nav{
   background-color:#222222;
@@ -15,7 +18,9 @@ nav li {
   color: #FFFFFF;
   opacity: 1;
 }
-
+.toggleButton{
+  display: none;
+}
 .nav a:hover{
   color: #EF233C;
 }
@@ -24,12 +29,14 @@ nav li {
 }
 .nav-title{
  float: left;
- background-color: #EF233C;
- margin-top: 12px;
- margin-left: 12px;
- border-radius: 25px 25px 25px 25px;
+ padding: 12px;
 }
-.nav-title img{
+.logo{
+  background-color: #EF233C;
+  border-radius: 50%;
+ 
+}
+.logo img{
   padding: 10px;
 }
 .nav-left {
@@ -41,18 +48,29 @@ nav li {
 }
 
 @media screen and (max-width: 500px) {
-  nav{
-    height: 100vh;
-    display: block;
-  }
   nav li{
-    display: block;
+    display: none;
   }
-  .nav-left {
-    float: none;
+
+  .toggleButton{
+    display: inline-block;
+    color: #EF233C;
+    height: 18px;
+    padding: 12px;
+    float: right;
+    width: 25px;
   }
-  
-  .nav-right {
-    float: none;
-  }
+  .nav-title{
+    float: left;
+    background-color: #EF233C;
+    margin-top: 10px;
+    margin-left: 12px;
+    border-radius: 25px 25px 25px 25px;
+   }
+   .logo img{
+     padding: 10px;
+   }
+
+
+   
 }

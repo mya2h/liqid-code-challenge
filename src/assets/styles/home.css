@@ -70,11 +70,32 @@ align-items: center;
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 599px) {
  .row{
    display: block;
  }
  .row .col2{
    display: block;
  }
+ .col2 h3{
+  font: italic normal 300 25px/33px Roboto;
+  color: #EF233C;
+  padding-left: 16px;
+  padding-right: 2px;
 }
+.col2 p{
+  font: normal normal 300 16px/24px Roboto;
+  padding-left: 16px;
+  padding-right: 2px;
+}
+}
+@media screen and (min-width: 701px) and (max-width: 900px){
+  .row .col2{
+    display: block;
+  }
+ }
+ @media screen and (min-width: 600px) and (max-width: 700px){
+  .row{
+    display: block;
+  }
+ }

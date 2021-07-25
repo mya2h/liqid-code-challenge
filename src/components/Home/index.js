@@ -1,12 +1,13 @@
 import Nav from '../Nav/index'
-
 import Layout from './landing'
+import ProductChart from './products'
 const Home = () => {
 
     return(
         <div>
-            {/* <Nav/> */}
+            <Nav/>
             <Layout/>
+            <ProductChart/>
         </div>
     )
 }
