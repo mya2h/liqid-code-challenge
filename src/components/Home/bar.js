@@ -80,6 +80,7 @@ const Chart = () => {
 		svg.append('g')
 			.attr('transform', 'translate(0,'+ chartheight + ')')
 			.call(d3.axisBottom(x).tickFormat(i=>data[i].category).tickSizeOuter(0))
+			
 
 		const max = d3.max(data, function(d){return d.quantity+80})
 
@@ -131,8 +132,10 @@ const Chart = () => {
                   })
 				  .on("mousemove", mousemove)
 				  .on("mouseleave", mouseleave)
-				  .on("mouseover", mouseover)		  
-                .style("border", "none"); 
+				  .on("mouseover", mouseover)		
+				  .classed('testclass', true)  
+                // .style("border", "none"); 
+				
                
             svg.append('g')
                 .selectAll("text")
@@ -140,7 +143,7 @@ const Chart = () => {
                 .enter()
                 .append("text")
                 .text((d) => d.quantity+"€")
-                .attr('x', (d,i) => x(i))
+                .attr('x', (d,i) => x(i)+ x.bandwidth()/2)
 				.attr('y', d => y(d.quantity))   
 
 	}

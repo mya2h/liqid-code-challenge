@@ -1,7 +1,7 @@
 #d3demo{
 	height: 700;
 	width: 500;
-	background: #EF233C;
+
 	overflow: hidden;
 }
 .content{
@@ -34,7 +34,6 @@
 	padding-left: 25%;
 	padding-top: 5%;
 }
-
 
 
 @media screen and (max-width: 599px) {
