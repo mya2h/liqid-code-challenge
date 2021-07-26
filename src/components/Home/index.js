@@ -1,14 +1,16 @@
-import Nav from '../Nav/index'
+import Nav from '../Nav'
 import Layout from './landing'
 import ProductChart from './products'
-import "../../assets/styles/home.css"
+import Footer from '../Footer'
+
 const Home = () => {
 
-    return(
+    return (
         <div>
-            <Nav/>
-            <Layout/>
-            <ProductChart/>
+            <Nav />
+            <Layout />
+            <ProductChart />
+            <Footer />
         </div>
     )
 }

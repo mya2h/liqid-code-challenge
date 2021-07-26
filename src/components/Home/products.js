@@ -1,11 +1,9 @@
 import React from 'react';
-import BarChart from './sample'
-import Chart from './bar'
+import Chart from './barGraph'
 
 function ProductChart() {
   return (
-        <Chart />
-
+    <Chart />
   );
 }
 
