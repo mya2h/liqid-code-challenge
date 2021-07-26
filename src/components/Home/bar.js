@@ -64,10 +64,8 @@ const Chart = () => {
 
 		// console.log(dimensions.width, dimensions.height)
 
-		const chartwidth = parseInt(d3.select('#d3demo').style('width')) - margin.left - margin.right
-		const chartheight = parseInt(d3.select('#d3demo').style('height')) - margin.top - margin.bottom
-
-
+		const chartwidth = 700 - margin.left - margin.right
+		const chartheight = 500 - margin.top - margin.bottom
 		const svg = d3.select(d3Chart.current)
 						.attr('width', chartwidth + margin.left + margin.right)
 						.attr('height', chartheight + margin.top + margin.bottom)
@@ -96,24 +94,28 @@ const Chart = () => {
         
         
         // add tooltips
-        var tooltip = d3.select('.tooltip-area')
-        .style('opacity', 0);
-        const mouseover = (event, d) => {
-            svg.style('opacity', 0);
-          };
-    
-          const mouseleave = (event, d) => {
-            // tooltip.style('opacity', 0);
-          }
-    
-          const mousemove = (event, d) => {
-            // const text = d3.select('.tooltip-area__text');
-            // text.text(`Sales were ${d.sales} in ${d.year}`);
-            // const [x, y] = d3.pointer(event);
-    
-            // tooltip
-            //   .attr('transform', `translate(${x}, ${y})`);
-          };
+		var tooltip = d3.select('.tooltip-area')
+        .style('top', 20);
+
+      const mouseover = (event, d) => {
+        tooltip.style("top", "20px");
+      };
+
+      const mouseleave = (event, d) => {
+        // tooltip.style('opacity', 0);
+      }
+
+      const mousemove = (event, d) => {
+        const text = d3.select('.tooltip-area__text');
+        text.text(`Total:  ${d.quantity}
+        Initial invest: ${d.quantity}
+        Growth: ${d.quantity}
+        `);
+        const [x, y] = d3.pointer(event);
+
+        tooltip
+          .attr('transform', `translate(${x}, ${y})`);
+      };
 
 		// Draw bars
 		svg.append('g')
@@ -127,13 +129,11 @@ const Chart = () => {
                 .attr('fill',function(d) {
                     return colorPicker(d); // call the color picker to get the fill.
                   })
-                  .on("mousemove", ()=>console.log("mousemoved"))
-                  .on("mouseleave", ()=>console.log("mouseleave"))
-                  .on("mouseover", ()=>mouseover)
+				  .on("mousemove", mousemove)
+				  .on("mouseleave", mouseleave)
+				  .on("mouseover", mouseover)		  
                 .style("border", "none"); 
                
-                 
-
             svg.append('g')
                 .selectAll("text")
                 .data(data)

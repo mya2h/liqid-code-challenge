@@ -1,8 +1,28 @@
 import { useD3 } from "./hooks/useD3";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import * as d3 from "d3";
 import '../../assets/styles/product.css'
 function BarChart() {
+    const [heightval,setheight] = useState(500)
+    const [widthval,setWidth] = useState(600)
+    
+	useEffect(()=>{
+
+		// Listen for any resize event update
+		window.addEventListener('resize', ()=>{
+            setheight(window.innerHeight)
+            setWidth(window.innerWidth)
+
+			// If resize, remove the previous chart
+			// if(update.current){
+			// 	d3.selectAll('g').remove()
+			// } else {update.current = true}
+		})
+
+		// Draw chart using the data and updated dimensions
+		// DrawChart(sample,dimensions)
+
+	},[heightval,widthval])
     function colorPicker(v) {
         if (v.category == "LIQID Cash") {
           return "#D5BDD9";
@@ -25,16 +45,11 @@ function BarChart() {
     {category:'LIQID Wealth', quantity: 850},
     {category:'LIQID Private Equity', quantity: 220},
     {category:'LIQID Venture', quantity: 510}
-    ] 
-    // {category:1989, quantity: 920},
-    // {category:1992, quantity: 630},
-    // {category:1993, quantity: 850},
-    // {category:1998, quantity: 220},
-    // {category:2000, quantity: 510}
+     ] 
   const ref = useD3(
     (svg) => {
-      const height = 500;
-      const width = 500;
+      const height = heightval;
+      const width = widthval;
       const margin = { top: 20, right: 30, bottom: 30, left: 40 };
 
       const x = d3
@@ -119,15 +134,14 @@ function BarChart() {
   );
 
   return (
-    <>
+  <div className="content">
+    <div className="title">
+     | Your products
+    </div>
+    <div  className="graph">
       <svg
         ref={ref}
-        style={{
-          height: "90vh",
-          width: "100%",
-          marginRight: "0px",
-          marginLeft: "0px",
-        }}
+        className="bargraph"
       >
         <g className="plot-area" />
         <g className="plot" />
@@ -137,7 +151,8 @@ function BarChart() {
           <text className="tooltip-area__text"></text>
         </g>
       </svg>
-    </>
+      </div>
+      </div>
   );
 }
 

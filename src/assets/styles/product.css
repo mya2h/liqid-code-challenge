@@ -1,4 +1,46 @@
 #d3demo{
-	/* width: 100vw; */
-	height: 50vh;
+	height: 700;
+	width: 500;
+	background: #EF233C;
+	overflow: hidden;
 }
+.content{
+  background: #F0F0F3;
+  height: 100vh;
+  text-align: center;
+  display: block;
+  padding: 2%;
+  overflow: hidden;
+}
+.bargraph{
+	height: 90vh;
+	width: 100vw;
+    float: right;
+}
+.title {
+	font:italic normal 300 25px/33px Roboto;
+	color: #EF233C;
+	align-self: center;
+}
+/* .tooltip-area{
+	opacity:0;
+	background: coral;
+} */
+.graph{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	padding-left: 25%;
+	padding-top: 5%;
+}
+
+
+
+@media screen and (max-width: 599px) {
+	.plot-area {
+		width: 30em;
+		overflow-x: scroll;
+		white-space: nowrap;
+	 }
+   }

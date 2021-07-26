@@ -1,6 +1,6 @@
 nav {
   width: 100%;
-  overflow: auto;
+  overflow: hidden;
   justify-content: center;
   align-content: center;
   align-items: center;

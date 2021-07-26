@@ -2,13 +2,14 @@
   display: grid; 
   grid-template-columns: 50% 50%;
   height: 87vh;
+
 }
 .row .col2{
   display: grid;
   grid-template-columns: 50% 50%;
   grid-gap: 22px;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 9%;
+  padding-right: 9%;
 
 }
 .col1{
@@ -23,7 +24,6 @@ align-items: center;
 .stock{
 background: #F0F0F3;
 align-items: center;
-
 }
 .col2 h3{
   font: italic normal 300 25px/33px Roboto;
@@ -35,6 +35,7 @@ align-items: center;
   font: normal normal 300 16px/24px Roboto;
   padding-left: 16px;
   padding-right: 2px;
+  color: #222222;
 }
 .stock .btn{
   background-color: #EF233C;
@@ -73,6 +74,10 @@ align-items: center;
 @media screen and (max-width: 599px) {
  .row{
    display: block;
+   height: 100%;
+   padding-bottom: 5%;
+
+   
  }
  .row .col2{
    display: block;
@@ -97,5 +102,6 @@ align-items: center;
  @media screen and (min-width: 600px) and (max-width: 700px){
   .row{
     display: block;
+      height: 87vh;
   }
  }
