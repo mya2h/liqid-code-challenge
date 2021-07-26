@@ -53,8 +53,8 @@ const Chart = () => {
 	const margin = { top: 50, right: 30, bottom: 30, left: 60 }
 
 	function DrawChart(data, dimensions) {
-		const chartwidth = 700 - margin.left - margin.right
-		const chartheight = 500 - margin.top - margin.bottom
+		const chartwidth = parseInt(d3.select('.d3chart').style('width')) - margin.left - margin.right
+		const chartheight = parseInt(d3.select('.d3chart').style('height')) - margin.top - margin.bottom
 		const svg = d3.select(d3Chart.current)
 			.attr('width', chartwidth + margin.left + margin.right)
 			.attr('height', chartheight + margin.top + margin.bottom)
@@ -66,6 +66,7 @@ const Chart = () => {
 
 		svg.append('g')
 			.attr('transform', 'translate(0,' + chartheight + ')')
+			.attr('class', 'x axis')
 			.call(d3.axisBottom(x).tickFormat(i => data[i].category).tickSizeOuter(0))
 
 
@@ -75,39 +76,45 @@ const Chart = () => {
 			.range([chartheight, margin.top])
 
 		svg.append('g')
+		.attr('class', 'y axis')
 			.attr('transform', 'translate(' + margin.left + ',0)')
 			.call(d3.axisLeft(y).tickFormat(d => d + " €"))
 
 
+     
 		// add tooltips
-		var tooltip = d3.select('.tooltip-area')
-			.style('top', 20);
-
+		var tooltip = d3.select('.tooltip-area__text')
+		.style("position", "absolute")
+		.style("visibility", "hidden")
+		.style('background-color','red')
+		.style("border", "solid")
+		.style("border-width", "1px")
+		.style("border-radius", "5px")
+		.style("padding", "10px")
+	
 		const mouseover = (event, d) => {
-			tooltip.style("top", "20px");
+			tooltip.style("visibility", "visible")
 		};
 
 		const mouseleave = (event, d) => {
-			// tooltip.style('opacity', 0);
+			tooltip.style("visibility", "hidden")
 		}
 
 		const mousemove = (event, d) => {
-			const text = d3.select('.tooltip-area__text');
-			text.text(`Total:  ${d.quantity}
-        Initial invest: ${d.quantity}
-        Growth: ${d.quantity}
-        `);
 			const [x, y] = d3.pointer(event);
-
 			tooltip
-				.attr('transform', `translate(${x}, ${y})`);
+			
+				.attr('transform', `translate(${x}, ${y})`)
+				.style("top", (event.pageY-800)+"px").style("left",(event.pageX-800)+"px")
+				.text("The exact value of<br>this cell is: " + d.quantity)
 		};
 
 		// Draw bars
 		svg.append('g')
 			.selectAll('rect')
 			.data(data)
-			.join('rect')
+			  .join('rect')
+            .attr('class', 'bar')
 			.attr('x', (d, i) => x(i))
 			.attr('y', d => y(d.quantity))
 			.attr('height', d => y(0) - y(d.quantity))
@@ -139,6 +146,7 @@ const Chart = () => {
 			</div>
 			<svg
 				ref={d3Chart}
+				className="d3chart"
 
 			>
 				<g className="plot-area" />

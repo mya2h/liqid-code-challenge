@@ -1,9 +1,9 @@
 import { WiDirectionRight } from 'react-icons/wi'
 import '../../assets/styles/landing.css'
 
-const Layout = () => {
+const Layout = ({toggle}) => {
     return (
-        <div className="row">
+        <div className={toggle?"hidenrow":"row"}>
             <div class="column col1">
                 <div className="col1content">
                     <h2>

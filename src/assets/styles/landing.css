@@ -79,6 +79,9 @@ align-items: center;
 
    
  }
+ .hidenrow{
+   display: none;
+ }
  .row .col2{
    display: block;
  }

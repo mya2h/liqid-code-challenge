@@ -1,7 +1,7 @@
-#d3demo{
-	height: 700;
-	width: 500;
-	overflow: hidden;
+.d3chart{
+	width: 700px;
+	height: 500px;
+	
 }
 .content{
   background: #F0F0F3;
@@ -9,7 +9,9 @@
   text-align: center;
   display: block;
   padding: 2%;
+  overflow-x: auto;
 }
+
 .title {
 	font:italic normal 300 25px/33px Roboto;
 	color: #EF233C;
@@ -26,9 +28,20 @@
 
 
 @media screen and (max-width: 599px) {
-	.plot-area {
-		width: 30em;
-		overflow-x: scroll;
-		white-space: nowrap;
-	 }
+	.hidenrow{
+		display: none;
+	  }
    }
+   @media screen and (min-width: 701px) and (max-width: 900px){
+	 .d3chart{
+		width: 100vw;
+		height: 90vh;
+	}
+	}
+	@media screen and (min-width: 600px) and (max-width: 700px){
+	 .d3chart{
+		width: 90vw;
+		height: 90vh;
+	}
+	
+	}
