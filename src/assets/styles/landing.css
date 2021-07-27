@@ -79,6 +79,10 @@ align-items: center;
 
    
  }
+ .stock{
+  border-radius: 0 0 0 24px;
+ }
+
  .hidenrow{
    display: none;
  }
