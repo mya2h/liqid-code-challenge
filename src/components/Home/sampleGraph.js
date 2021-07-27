@@ -37,18 +37,9 @@ const Bar = () => {
     const update = useRef(false)
 
     useEffect(() => {
-        window.addEventListener('resize', () => {
-            setDimensions({
-                width: window.innerWidth,
-                height: window.innerHeight
-            })
-            if (update.current) {
-                d3.selectAll('g').remove()
-            } else { update.current = true }
-        })
         DrawChart(sample)
 
-    }, [dimensions])
+    }, [])
 
     function DrawChart(data) {
         var margin = { top: 20, right: 25, bottom: 30, left: 40 },
