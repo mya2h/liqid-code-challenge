@@ -85,36 +85,39 @@ const Bar = () => {
 
         var Tooltip = d3.select("#div_template")
             .append("div")
-            .style("opacity", 0)
+            .style("visibility", "hidden")
             .style("position", "absolute")
             .attr("class", "tooltip")
             .style("background-color", "white")
             .style("border", "solid")
             .style("border-width", "2px")
+            .style("border-color", "white")
             .style("border-radius", "5px")
-            .style("padding", "5px")
+            .style("border-bottom-left-radius", "20px")
             .style("width", "200px")
             .style("z-index", 20)
 
         var mouseover = function (d) {
             Tooltip
-                .style("opacity", 1)
+                .style("visibility", "visible")
             d3.select(this)
                 .style("stroke", "black")
                 .style("opacity", 1)
         }
         var mousemove = function (event, d) {
             const [x, y] = d3.pointer(event);
-            console.log(x)
             Tooltip
-                .html("The exact value of<br>this cell is: " + d.quantity)
-                .style("margin-left", (x + 70) + "px")
-                .style("margin-top", -(y) + "px")
+                .html(`
+                    <div>Total:  <span>${d.quantity}€</span></div>
+                    <div>Initial invest:  <span>${d.quantity}€</span></div>
+                    <div>Growth:<span>${d.quantity / 100}%</span></div>`)
+                .style("left", event.pageX + "px")
+                .style("top", event.pageY + "px")
 
         }
         var mouseleave = function (d) {
             Tooltip
-                .style("opacity", 0)
+                .style("visibility", "hidden")
             d3.select(this)
                 .style("stroke", "none")
                 .style("opacity", 0.8)
