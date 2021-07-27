@@ -46,17 +46,14 @@ const Bar = () => {
                 d3.selectAll('g').remove()
             } else { update.current = true }
         })
-        DrawChart(sample, dimensions)
+        DrawChart(sample)
 
     }, [dimensions])
 
-    function DrawChart(data, dimensions) {
+    function DrawChart(data) {
         var margin = { top: 20, right: 25, bottom: 30, left: 40 },
             width = 650 - margin.left - margin.right,
             height = 450 - margin.top - margin.bottom;
-
-
-        // append the svg object to the body of the page
         var svg = d3.select("#div_template")
             .append("svg")
             .attr("width", width + margin.left + margin.right)
@@ -89,6 +86,7 @@ const Bar = () => {
         var Tooltip = d3.select("#div_template")
             .append("div")
             .style("opacity", 0)
+            .style("position", "absolute")
             .attr("class", "tooltip")
             .style("background-color", "white")
             .style("border", "solid")
