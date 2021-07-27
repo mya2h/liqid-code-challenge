@@ -39,8 +39,8 @@
 .menu-title{
   padding-left: 20px;
   display:inline-block;
-  font-size: 21px;
-  font: italic normal 300 16px/21px Roboto;
+  font-size: 1.313em;
+  font: italic normal 300 1em/1.313em Roboto;
   opacity: 1;
 }
 .nav-link{
@@ -51,7 +51,7 @@
   padding: 12px;
   text-decoration: none;
   display:inline-block;
-  font-size: 17px;
+  font-size: 1.063em;
   font-family:Roboto;
   letter-spacing: 0px;
   color: #FFFFFF;
@@ -68,7 +68,7 @@
 .hamburger {
   display: none;
 }
-.nav-menu h2{
+.footer-sidebar{
   display: none;
 }
 .nav-menu-right .right-item{
@@ -95,12 +95,8 @@
 .nav-title .left-item{
   display: none;
 }
-.nav-menu h2{
-  display: block;
-  margin-top: 40%;
-  font: normal 300 25px/33px Roboto;
-  color: #FFFFFF;
-   
+.nav .active{
+  color: #EF233C;
 }
 .nav-logo-open{
   z-index: 9;
@@ -129,6 +125,12 @@
 }
 .nav-menu.active {
     left: 0;
+}
+.footer-sidebar{
+  display: block;
+  margin-top: 50%;
+  font: normal 300 1.8em/2em Roboto;
+  color: #FFFFFF;
 }
 .disable{
   display: none;

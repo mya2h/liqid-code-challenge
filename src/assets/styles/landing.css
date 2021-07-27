@@ -26,13 +26,13 @@ background: #F0F0F3;
 align-items: center;
 }
 .col2 h3{
-  font: italic normal 300 25px/33px Roboto;
+  font: italic normal 300 1.5em/1.8em Roboto;
   color: #EF233C;
   padding-left: 16px;
   padding-right: 2px;
 }
 .col2 p{
-  font: normal normal 300 16px/24px Roboto;
+  font: normal normal 300 1em/1.5em Roboto;
   padding-left: 16px;
   padding-right: 2px;
   color: #222222;
@@ -58,7 +58,7 @@ align-items: center;
 }
 
 .col1content h2{
-  font:italic normal 300 25px/33px Roboto;
+  font:italic normal 300 1.5em/1.7em Roboto;
   color: #FFFFFF;
 }
 .col1content p{
