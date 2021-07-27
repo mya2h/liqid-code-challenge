@@ -11,6 +11,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .nav-title{
   display: flex;
   justify-content: space-between;
@@ -26,14 +27,25 @@
   height:30px;
   margin:2%
 }
+.nav-logo-open img {
+  background: #000000;
+  padding: 10px;
+  border-radius: 50%;
+  display:block;
+  width:30px;
+  height:30px;
+  margin:2%
+}
 .menu-title{
   padding-left: 20px;
-  text-decoration: none;
   display:inline-block;
   font-size: 21px;
   font: italic normal 300 16px/21px Roboto;
-  color: #FFFFFF;
   opacity: 1;
+}
+.nav-link{
+  text-decoration: none;
+  color: #FFFFFF;
 }
 .nav-item {
   padding: 12px;
@@ -47,9 +59,6 @@
 }
 
 .nav-link:hover{
-  color: #EF233C;
-}
-.nav-menu .active{
   color: #EF233C;
 }
 .toggle-icon {
@@ -80,7 +89,7 @@
     transition: 0.3s;
     padding-top: 16%;
 }
-.nav-logo img {
+.nav-title img {
   margin:5px;
 }
 .nav-title .left-item{
@@ -88,15 +97,17 @@
 }
 .nav-menu h2{
   display: block;
-  padding-top: 63%;
+  margin-top: 40%;
   font: normal 300 25px/33px Roboto;
   color: #FFFFFF;
    
 }
-.nav-logo{
+.nav-logo-open{
   z-index: 9;
 }
-
+.menu-title {
+  z-index: 9;
+}
 .nav-item {
  display: block;
 }
