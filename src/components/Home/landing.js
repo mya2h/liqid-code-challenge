@@ -1,9 +1,9 @@
 import { WiDirectionRight } from 'react-icons/wi'
 import '../../assets/styles/landing.css'
 
-const Layout = ({toggle}) => {
+const Landing = ({ toggle }) => {
     return (
-        <div className={toggle?"hidenrow":"row"}>
+        <div className={toggle ? "hidenrow" : "row"}>
             <div class="column col1">
                 <div className="col1content">
                     <h2>
@@ -44,4 +44,4 @@ const Layout = ({toggle}) => {
         </div>
     )
 }
-export default Layout
+export default Landing

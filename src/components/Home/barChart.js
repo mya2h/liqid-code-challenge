@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect} from 'react';
 import * as d3 from 'd3';
 import '../../assets/styles/product.css'
 
 
-const sample = [
+const data = [
     { category: 'LIQID Cash', quantity: 920 },
     { category: 'LIQID Real Estate', quantity: 630 },
     { category: 'LIQID Wealth', quantity: 850 },
@@ -12,34 +12,27 @@ const sample = [
 ]
 
 
-const Bar = () => {
+const BarChart = () => {
     function colorPicker(v) {
-        if (v.category == "LIQID Cash") {
+        if (v.category === "LIQID Cash") {
             return "#D5BDD9";
-        } else if (v.category == "LIQID Real Estate") {
-            return "#A1CCBB";
+        } else if (v.category === "LIQID Real Estate") {
+            return "rgb(92, 189, 132)";
         }
-        else if (v.category == "LIQID Wealth") {
+        else if (v.category === "LIQID Wealth") {
             return "#124366";
         }
-        else if (v.category == "LIQID Private Equity") {
+        else if (v.category === "LIQID Private Equity") {
             return "#5CB5B2";
         }
         else {
             return "#FFFA73"
         }
     }
-    const d3Chart = useRef()
-    const [dimensions, setDimensions] = useState({
-        width: window.innerWidth,
-        height: window.innerHeight
-    })
-    const update = useRef(false)
 
     useEffect(() => {
-        DrawChart(sample)
-
-    }, [])
+        DrawChart(data)
+    })
 
     function DrawChart(data) {
         var margin = { top: 20, right: 25, bottom: 30, left: 40 },
@@ -96,12 +89,11 @@ const Bar = () => {
                 .style("opacity", 1)
         }
         var mousemove = function (event, d) {
-            const [x, y] = d3.pointer(event);
             Tooltip
                 .html(`
-                    <div>Total:  <span>${d.quantity}€</span></div>
-                    <div>Initial invest:  <span>${d.quantity}€</span></div>
-                    <div>Growth:<span>${d.quantity / 100}%</span></div>`)
+                    <div>Total:<span>${d.quantity} €</span></div>
+                    <div>Initial invest:<span>${d.quantity} €</span></div>
+                    <div>Growth:<span>${d.quantity / 100} %</span></div>`)
                 .style("left", event.pageX + "px")
                 .style("top", event.pageY + "px")
 
@@ -125,7 +117,7 @@ const Bar = () => {
             .attr('height', d => y(0) - y(d.quantity))
             .attr('width', x.bandwidth())
             .attr('fill', function (d) {
-                return colorPicker(d); // call the color picker to get the fill.
+                return colorPicker(d); 
             })
             .style("stroke-width", 1)
             .style("stroke", "none")
@@ -162,4 +154,4 @@ const Bar = () => {
     )
 }
 
-export default Bar
+export default BarChart

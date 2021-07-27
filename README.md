@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Liqid Code Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Prerequisites
 
-## Available Scripts
+### Install Node JS
+Refer to https://nodejs.org/en/ to install nodejs
 
-In the project directory, you can run:
+### Install create-react-app
+Install create-react-app npm package globally. This will help to easily run the project and also build the source files easily. Use the following command to install create-react-app
 
-### `npm start`
+```bash
+npm install -g create-react-app
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Cloning and Running the Application in local
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Clone the project into local
 
-### `npm test`
+Install all the npm packages. Go into the project folder and type the following command to install all npm packages
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+```
 
-### `npm run build`
+In order to run the application Type the following command
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The Application Runs on **localhost:3000**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Application design
 
-### `npm run eject`
+#### Components
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. **Nav** Component : This Component displays the navigation bar
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Landing** Component : This Component Displays the welcome page, investments and stocks
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. **BarChart** Component : This Component Displays the barchart for investments
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. **Home** Component : This Component Combines *Landing and BarChart* components
 
-## Learn More
+5. **Footer** Component : This Component Displays the footer
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### URL
 
-### Code Splitting
+The application has just one url /home which ties to *Home* Component
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Resources
 
-### Analyzing the Bundle Size
+**create-react-app** : The following link has all the commands that can be used with create-react-app
+https://github.com/facebook/create-react-app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**ReactJS** : Refer to https://reactjs.org/ to understand the concepts of ReactJS
 
-### Making a Progressive Web App
+**React-Router-Dom** : Refer to https://reactrouter.com/web/guides/quick-start to understand routing in react
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**React-icons**: Refer to https://react-icons.github.io/react-icons/ for react icons
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**D3.js** : Refer to https://d3js.org/ to understand the concepts of D3.js and https://www.educative.io/blog/d3js-tutorial for more

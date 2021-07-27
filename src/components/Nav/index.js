@@ -21,7 +21,7 @@ const Nav = ({ setToggle }) => {
         <div>
             <nav className={navbarOpen ? "active-nav" : "nav"}>
                 <div className="nav-title">
-                    {navbarOpen ? <div className="nav-logo-open"> <img src={redLogo} /></div> : <div className="nav-logo"> <img src={mainIcon} /></div>}
+                    {navbarOpen ? <div className="nav-logo-open"> <img src={redLogo} alt="logo"/></div> : <div className="nav-logo"> <img src={mainIcon} alt="logo"/></div>}
                     <div className="menu-title"><NavLink to="/home" activeClassName="active-link" className="nav-link">Hello, Liqid</NavLink></div>
                     <div className="menu-title separator">|</div>
                     <div className="nav-item left-item"><NavLink to="/home" activeClassName="active-link" className="nav-link"><IoLogOutOutline className="icon" />Logout</NavLink></div>

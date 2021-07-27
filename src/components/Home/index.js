@@ -7,7 +7,7 @@ import '../../assets/styles/nav.css'
 const Home = () => {
     const [toggle, setToggle] = useState(false)
     return (
-        <div>
+        <div>   
             <Nav setToggle={setToggle} />
             <Layout/>
             <ProductChart/>
