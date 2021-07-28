@@ -91,7 +91,6 @@ const BarChart = () => {
         }
         var mousemove = (event, d) => {
             const leftPosition = event.pageX
-            console.log(leftPosition)
             const topPosition = event.pageY
             Tooltip
                 .html(`
@@ -100,7 +99,6 @@ const BarChart = () => {
                     <div>Growth:<span>${d.quantity / 100} %</span></div>`)
                 .style("left", `${leftPosition}px`)
                 .style("top", `${topPosition}px`)
-
         }
         var mouseleave = (d) => {
             Tooltip
