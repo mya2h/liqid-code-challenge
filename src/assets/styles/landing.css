@@ -2,6 +2,7 @@
   display: grid; 
   grid-template-columns: 50% 50%;
   height: 87vh;
+  overflow: hidden;
 
 }
 .row .col2{
@@ -19,22 +20,27 @@
 .investments{
 background: #F0F0F3;
 border-radius: 0 0 0 24px;
+display: block;
 align-items: center;
 }
 .stock{
 background: #F0F0F3;
+display: block;
 align-items: center;
+
 }
 .col2 h3{
   font: italic normal 300 1.5em/1.8em Roboto;
   color: #EF233C;
   padding-left: 16px;
   padding-right: 2px;
+  padding-top: 10px;
 }
 .col2 p{
   font: normal normal 300 1em/1.5em Roboto;
   padding-left: 16px;
   padding-right: 2px;
+  padding-bottom: 14px;
   color: #222222;
 }
 .stock .btn{

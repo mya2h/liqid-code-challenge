@@ -4,7 +4,7 @@
     justify-content: center;
     text-align: center;
     background-color: #000000;
-    /* padding: 2px; */
+    overflow: hidden;
 }
 .footer h2{
     color: #EF233C;

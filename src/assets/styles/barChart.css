@@ -12,17 +12,12 @@
   overflow-x: auto;
 }
 .tooltip{
-	background-color: #EF233C;
-	padding: 0.5%;
-	display: inline;
 	flex-direction: column;
 	font:normal 300 16px/21px Roboto;
-	float: left;
 	
 }
 .tooltip span{
 	color: #1eb3ae;
-	padding-left: 13px;
 	float:right;
 }
 
@@ -30,6 +25,7 @@
 	font:italic normal 300 25px/33px Roboto;
 	color: #EF233C;
 	align-self: center;
+	padding-top: 1%;
 }
 .graph{
 	display: flex;

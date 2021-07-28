@@ -1,6 +1,6 @@
 import React, { useEffect} from 'react';
 import * as d3 from 'd3';
-import '../../assets/styles/product.css'
+import '../../assets/styles/barChart.css'
 
 
 const data = [
@@ -32,7 +32,7 @@ const BarChart = () => {
 
     useEffect(() => {
         DrawChart(data)
-    })
+    },[])
 
     function DrawChart(data) {
         var margin = { top: 20, right: 25, bottom: 30, left: 40 },
@@ -89,13 +89,15 @@ const BarChart = () => {
                 .style("opacity", 1)
         }
         var mousemove = function (event, d) {
+            const leftPosition = event.pageX
+            const topPosition = event.pageY
             Tooltip
                 .html(`
                     <div>Total:<span>${d.quantity} €</span></div>
                     <div>Initial invest:<span>${d.quantity} €</span></div>
                     <div>Growth:<span>${d.quantity / 100} %</span></div>`)
-                .style("left", event.pageX + "px")
-                .style("top", event.pageY + "px")
+                .style("left", leftPosition + "px")
+                .style("top", topPosition + "px")
 
         }
         var mouseleave = function (d) {
@@ -148,7 +150,6 @@ const BarChart = () => {
             <div id="div_template">
 
             </div>
-
         </div>
 
     )

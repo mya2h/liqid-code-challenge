@@ -1,3 +1,4 @@
+
 .nav{
   width: 100%;
   overflow: hidden;
@@ -60,6 +61,9 @@
 }
 
 .nav-link:hover{
+  color: #EF233C;
+}
+.active-link{
   color: #EF233C;
 }
 .toggle-icon {

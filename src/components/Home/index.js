@@ -1,16 +1,16 @@
+import { useState } from 'react'
 import Nav from '../Nav'
 import Layout from './landing'
-import ProductChart from './products'
 import Footer from '../Footer'
-import { useState } from 'react'
+import BarChart from './barChart'
 import '../../assets/styles/nav.css'
+
 const Home = () => {
-    const [toggle, setToggle] = useState(false)
     return (
         <div>   
-            <Nav setToggle={setToggle} />
+            <Nav active="home"/>
             <Layout/>
-            <ProductChart/>
+            <BarChart/>
             <Footer />
         </div>
     )
