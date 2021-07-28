@@ -61,7 +61,7 @@
 }
 
 .nav-link:hover{
-  color: #EF233C;
+  color: #aedfe2;
 }
 .active-link{
   color: #EF233C;
@@ -93,6 +93,9 @@
     text-align: center;
     transition: 0.3s;
     padding-top: 16%;
+}
+.active-link-open{
+  color: #000000;
 }
 .nav-title img {
   margin:5px;

@@ -134,8 +134,8 @@ const BarChart = () => {
             .data(data)
             .enter()
             .append("text")
-            .text((d) => d.quantity + "€")
-            .attr('x', (d, i) => x(i) + x.bandwidth() / 2)
+            .text((d) => d.quantity + " €")
+            .attr('x', (d, i) => x(i) + 30)
             .attr('y', d => y(d.quantity) - 10)
 
 
