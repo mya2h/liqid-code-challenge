@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Nav from '../Nav'
 import Layout from './landing'
 import Footer from '../Footer'
@@ -8,7 +7,7 @@ import '../../assets/styles/nav.css'
 const Home = () => {
     return (
         <div>   
-            <Nav active="home"/>
+            <Nav/>
             <Layout/>
             <BarChart/>
             <Footer />

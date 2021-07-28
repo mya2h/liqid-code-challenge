@@ -10,7 +10,7 @@ import redLogo from '../../assets/images/redlogo.svg'
 import '../../assets/styles/nav.css'
 
 
-const Nav = ({active}) => {
+const Nav = () => {
 
     const [navbarOpen, setNavbarOpen] = useState(false)
     const handleToggle = () => {
@@ -22,7 +22,7 @@ const Nav = ({active}) => {
             <nav className={navbarOpen ? "active-nav" : "nav"}>
                 <div className="nav-title">
                     {navbarOpen ? <div className="nav-logo-open"> <img src={redLogo} alt="logo"/></div> : <div className="nav-logo"> <img src={mainIcon} alt="logo"/></div>}
-                    <div className="menu-title"><NavLink to="/home" className={active==="main"?"nav-link active-link":"nav-link"}>Hello, Liqid</NavLink></div>
+                    <div className="menu-title"><NavLink to="/main" className ="nav-link" activeClassName="active-link">Hello, Liqid</NavLink></div>
                     <div className="menu-title separator">|</div>
                     <div className="nav-item left-item"><NavLink to="/" className="nav-link"><IoLogOutOutline className="icon" />Logout</NavLink></div>
                 </div>
@@ -30,9 +30,9 @@ const Nav = ({active}) => {
                 <div className={navbarOpen ? "nav-menu active" : "nav-menu"}>
                     <ul className="nav-menu-right">
                         <li className="nav-item right-item"><NavLink to="/" className="nav-link" ><IoLogOutOutline className="icon" />Logout</NavLink></li>
-                        <li className="nav-item"><NavLink to="/home" className={active==="home"?"nav-link active-link":"nav-link"} ><AiOutlineHome className="icon" />Home</NavLink></li>
-                        <li className="nav-item"><NavLink to="/" className={active==="profile"?"nav-link active-link":"nav-link"} ><BsPerson className="icon" />Profile</NavLink></li>
-                        <li className="nav-item"><NavLink to="/" className={active==="setting"?"nav-link active-link":"nav-link"} ><FiSettings className="icon" />Settings</NavLink></li>
+                        <li className="nav-item"><NavLink to="/home" className ="nav-link" activeClassName="active-link"><AiOutlineHome className="icon" />Home</NavLink></li>
+                        <li className="nav-item"><NavLink to="/profile" className ="nav-link" activeClassName="active-link"><BsPerson className="icon" />Profile</NavLink></li>
+                        <li className="nav-item"><NavLink to="/settings" className ="nav-link" activeClassName="active-link" ><FiSettings className="icon" />Settings</NavLink></li>
                     </ul>
                     <div className="footer-sidebar">LIQID</div>
                 </div>
