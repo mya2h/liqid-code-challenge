@@ -8,7 +8,7 @@
   display: grid;
   grid-template-columns: 50% 50%;
   grid-gap: 22px;
-  padding-left: 9%;
+  padding-left: 5%;
   padding-right: 9%;
 }
 .col1 {
@@ -19,25 +19,25 @@
   background: #f0f0f3;
   border-radius: 0 0 0 24px;
   display: block;
+  padding: 5%;
   align-items: center;
+  padding-left: 10%;
 }
 .stock {
   background: #f0f0f3;
   display: block;
+  padding: 5%;
+  padding-left: 10%;
   align-items: center;
 }
 .col2 h3 {
   font: italic normal 300 1.5em/1.8em Roboto;
   color: #ef233c;
   padding-left: 10%;
-  border-left: 1px solid;
-  margin-left: 20%;
+  border-left: 2px solid;
 }
 .col2 p {
   font: normal normal 300 1em/1.5em Roboto;
-  padding-left: 16px;
-  padding-right: 2px;
-  padding-bottom: 14px;
   color: #222222;
 }
 .stock .btn {
@@ -80,13 +80,14 @@
   }
   .stock {
     border-radius: 0 0 0 24px;
-    padding-top: 2%;
+    margin-top: 5%;
   }
   .investments {
     margin-top: 5%;
-    padding-top: 2%;
   }
-
+  .col2 h3 {
+    margin-left: 8%;
+  }
   .hidenrow {
     display: none;
   }
@@ -110,6 +111,13 @@
   .row .col2 {
     display: block;
   }
+  .stock {
+    border-radius: 0 0 0 24px;
+    margin-top: 5%;
+  }
+  .investments {
+    margin-top: 5%;
+  }
 }
 @media screen and (min-width: 600px) and (max-width: 700px) {
   .row {
@@ -119,4 +127,5 @@
   .col2 {
     padding-top: 5%;
   }
+  
 }

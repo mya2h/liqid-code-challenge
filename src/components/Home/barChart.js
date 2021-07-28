@@ -68,7 +68,6 @@ const BarChart = () => {
         svg.append('g')
             .attr('transform', 'translate(' + margin.left + ',0)')
             .call(d3.axisLeft(y).tickFormat(d => `${d} €`))
-            .select(".domain").remove()
             .style("font-size","14px")
             .style("font-family","Roboto")
 
