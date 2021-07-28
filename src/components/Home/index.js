@@ -6,7 +6,9 @@ import BarChart from './barChart'
 import '../../assets/styles/nav.css'
 
 const Home = () => {
+
     const [navbarOpen, setNavbarOpen] = useState(false)
+
     return (
         <div className="home-layoout">
             <Nav setNavbarOpen={setNavbarOpen} navbarOpen={navbarOpen} />

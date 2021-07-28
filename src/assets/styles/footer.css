@@ -1,11 +1,11 @@
-.footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #000000;
-    overflow: hidden;
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #000000;
+  overflow: hidden;
 }
-.footer h2{
-    color: #EF233C;
+.footer h2 {
+  color: #ef233c;
 }

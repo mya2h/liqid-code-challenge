@@ -9,7 +9,6 @@ import mainIcon from '../../assets/images/Group 1.svg'
 import redLogo from '../../assets/images/redlogo.svg'
 import '../../assets/styles/nav.css'
 
-
 const Nav = ({ setNavbarOpen, navbarOpen }) => {
 
     const handleToggle = () => {
@@ -21,7 +20,7 @@ const Nav = ({ setNavbarOpen, navbarOpen }) => {
             <nav className={navbarOpen ? "active-nav" : "nav"}>
                 <div className="nav-title">
                     {navbarOpen ? <div className="nav-logo-open"> <img src={redLogo} alt="logo" /></div> : <div className="nav-logo"> <img src={mainIcon} alt="logo" /></div>}
-                    <div className="menu-title"><NavLink to="/main" className="nav-link" activeClassName={navbarOpen ? "active-link-open" : "active-link"}>Hello, Liqid</NavLink></div>
+                    <div className="menu-title"><NavLink to="/main" className="nav-link" activeClassName={navbarOpen ? "active-link-open" : "active-link"}>Hello, LIQID</NavLink></div>
                     <div className="menu-title separator">|</div>
                     <div className="nav-item left-item"><NavLink to="/" className="nav-link"><IoLogOutOutline className="icon" />Logout</NavLink></div>
                 </div>

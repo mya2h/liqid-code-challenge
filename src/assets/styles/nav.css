@@ -1,70 +1,72 @@
-
-.nav{
+.nav {
   width: 100%;
   overflow: hidden;
-  background-color:#222222;
+  background-color: #222222;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.nav-menu{
+.nav .icon {
+  padding-right: 3px;
+  margin-top: 6px;
+}
+.nav-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nav-title{
+.nav-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-left: 1%;
 }
 .nav-logo img {
-  background: #EF233C;
+  background: #ef233c;
   padding: 10px;
   border-radius: 50%;
-  display:block;
-  width:30px;
-  height:30px;
-  margin:2%
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 2%;
 }
 .nav-logo-open img {
   background: #000000;
   padding: 10px;
   border-radius: 50%;
-  display:block;
-  width:30px;
-  height:30px;
-  margin:2%
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 2%;
 }
-.menu-title{
+.menu-title {
   padding-left: 20px;
-  display:inline-block;
+  display: inline-block;
   font-size: 1.313em;
   font: italic normal 300 1em/1.313em Roboto;
   opacity: 1;
-  color: #FFFFFF;
+  color: #ffffff;
 }
-.nav-link{
+.nav-link {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .nav-item {
   padding: 12px;
   text-decoration: none;
-  display:inline-block;
+  display: inline-block;
   font-size: 1.063em;
-  font-family:Roboto;
+  font-family: Roboto;
   letter-spacing: 0px;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 1;
 }
-
-.nav-link:hover{
+.nav-link:hover {
   color: #aedfe2;
 }
-.active-link{
-  color: #EF233C;
+.active-link {
+  color: #ef233c;
 }
 .toggle-icon {
   color: #ffffff;
@@ -73,14 +75,14 @@
 .hamburger {
   display: none;
 }
-.footer-sidebar{
+.footer-sidebar {
   display: none;
 }
-.nav-menu-right .right-item{
+.nav-menu-right .right-item {
   display: none;
 }
 
-@media screen and (max-width: 600px) {  
+@media screen and (max-width: 600px) {
   .nav-menu {
     position: fixed;
     left: -110%;
@@ -88,70 +90,69 @@
     display: block;
     height: 100vh;
     flex-direction: column;
-    background-color: #EF233C;
+    background-color: #ef233c;
     width: 100%;
     text-align: center;
     transition: 0.3s;
     padding-top: 16%;
-}
-.active-link-open{
-  color: #000000;
-}
+  }
+  .active-link-open {
+    color: #000000;
+  }
 
-.layout-disable{
-  overflow: hidden;
-  height: 0px;
-}
-.nav-title img {
-  margin:5px;
-}
-.nav-title .left-item{
-  display: none;
-}
-.nav .active{
-  color: #EF233C;
-}
-.nav-logo-open{
-  z-index: 9;
-}
-.menu-title {
-  z-index: 9;
-}
-.nav-item {
- display: block;
-}
-.separator{
-  display: none;
-}
-.nav-menu-right .right-item{
-  display: block;
-}
-.active-nav{
-  position: fixed;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: 0.3s;
-
-}
-.nav-menu.active {
+  .layout-disable {
+    overflow: hidden;
+    height: 0px;
+  }
+  .nav-title img {
+    margin: 5px;
+  }
+  .nav-title .left-item {
+    display: none;
+  }
+  .nav .active {
+    color: #ef233c;
+  }
+  .nav-logo-open {
+    z-index: 9;
+  }
+  .menu-title {
+    z-index: 9;
+  }
+  .nav-item {
+    display: block;
+  }
+  .separator {
+    display: none;
+  }
+  .nav-menu-right .right-item {
+    display: block;
+  }
+  .active-nav {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+  }
+  .nav-menu.active {
     left: 0;
-}
-.footer-sidebar{
-  display: block;
-  margin-top: 50%;
-  font: normal 300 1.8em/2em Roboto;
-  color: #FFFFFF;
-}
-.disable{
-  display: none;
-}
-.hamburger {
-  display: block;
-  margin-right: 2%;
-  cursor: pointer;
-  z-index: 19;
-}
+  }
+  .footer-sidebar {
+    display: block;
+    margin-top: 45vh;
+    font: normal 300 1.8em/2em Roboto;
+    color: #ffffff;
+  }
+  .disable {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    margin-right: 2%;
+    cursor: pointer;
+    z-index: 19;
+  }
 }

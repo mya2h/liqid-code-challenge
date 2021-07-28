@@ -13,7 +13,12 @@ const data = [
 
 
 const BarChart = () => {
-    function colorPicker(v) {
+
+    useEffect(() => {
+        DrawChart(data)
+    }, [])
+
+    const colorPicker = (v) => {
         if (v.category === "LIQID Cash") {
             return "#D5BDD9";
         } else if (v.category === "LIQID Real Estate") {
@@ -30,11 +35,7 @@ const BarChart = () => {
         }
     }
 
-    useEffect(() => {
-        DrawChart(data)
-    }, [])
-
-    function DrawChart(data) {
+    const DrawChart = (data) => {
         var margin = { top: 20, right: 25, bottom: 30, left: 40 },
             width = 650 - margin.left - margin.right,
             height = 450 - margin.top - margin.bottom;
@@ -81,14 +82,14 @@ const BarChart = () => {
             .style("width", "200px")
             .style("z-index", 20)
 
-        var mouseover = function (d) {
+        var mouseover = (d) => {
             Tooltip
                 .style("visibility", "visible")
             d3.select(this)
                 .style("stroke", "black")
                 .style("opacity", 1)
         }
-        var mousemove = function (event, d) {
+        var mousemove = (event, d) => {
             const leftPosition = event.pageX
             console.log(leftPosition)
             const topPosition = event.pageY
@@ -101,7 +102,7 @@ const BarChart = () => {
                 .style("top", `${topPosition}px`)
 
         }
-        var mouseleave = function (d) {
+        var mouseleave = (d) => {
             Tooltip
                 .style("visibility", "hidden")
             d3.select(this)

@@ -1,17 +1,15 @@
-import { BrowserRouter as Router, Switch,Route, Redirect} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
 import Home from './components/Home'
 function App() {
   return (
     <div>
       <Router>
-       <Switch>
-       <Route path="/home">
-            <Home />
-          </Route>
-          <Redirect from ="/" to ="/home"/>
+        <Switch>
+          <Route path="/home" component={Home} />
+          <Redirect from="/" to="/home" />
         </Switch>
-        </Router>
+      </Router>
     </div>
   );
 }

@@ -1,57 +1,28 @@
-.d3chart{
-	width: 700px;
-	height: 500px;
-	
-}
-.content{
-  background: #F0F0F3;
+.content {
+  background: #f0f0f3;
   height: 90vh;
   text-align: center;
   display: block;
   padding: 2%;
   overflow-x: auto;
 }
-.tooltip{
-	flex-direction: column;
-	font:normal 300 16px/21px Roboto;
-	
+.tooltip {
+  flex-direction: column;
+  font: normal 300 16px/21px Roboto;
 }
-.tooltip span{
-	color: #1eb3ae;
-	float:right;
+.tooltip span {
+  color: #1eb3ae;
+  float: right;
 }
-
 .title {
-	font:italic normal 300 25px/33px Roboto;
-	color: #EF233C;
-	align-self: center;
-	padding-top: 1%;
+  font: italic normal 300 25px/33px Roboto;
+  color: #ef233c;
+  align-self: center;
+  padding-top: 1%;
 }
-.graph{
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
-	padding-left: 25%;
-	padding-top: 5%;
-}
-
 
 @media screen and (max-width: 599px) {
-	.hidenrow{
-		display: none;
-	  }
-   }
-   @media screen and (min-width: 701px) and (max-width: 900px){
-	 .d3chart{
-		width: 100vw;
-		height: 90vh;
-	}
-	}
-	@media screen and (min-width: 600px) and (max-width: 700px){
-	 .d3chart{
-		width: 90vw;
-		height: 90vh;
-	}
-	
-	}
+  .hidenrow {
+    display: none;
+  }
+}

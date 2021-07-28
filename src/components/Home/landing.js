@@ -1,9 +1,9 @@
 import { WiDirectionRight } from 'react-icons/wi'
 import '../../assets/styles/landing.css'
 
-const Landing = ({ toggle }) => {
+const Landing = () => {
     return (
-        <div className={toggle ? "hidenrow" : "row"}>
+        <div className="row">
             <div class="column col1">
                 <div className="col1content">
                     <h2>
@@ -35,7 +35,7 @@ const Landing = ({ toggle }) => {
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fermentum elit id auctor mollis.
                             </p>
-                            <button className="btn">Explore<WiDirectionRight /></button>
+                            <button className="btn">Explore<WiDirectionRight className="icon" /></button>
                         </div>
                     </div>
                 </div>
