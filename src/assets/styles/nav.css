@@ -97,6 +97,11 @@
 .active-link-open{
   color: #000000;
 }
+
+.layout-disable{
+  overflow: hidden;
+  height: 0px;
+}
 .nav-title img {
   margin:5px;
 }

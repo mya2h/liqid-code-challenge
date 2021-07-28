@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react';
+import React, { useEffect } from 'react';
 import * as d3 from 'd3';
 import '../../assets/styles/barChart.css'
 
@@ -32,13 +32,13 @@ const BarChart = () => {
 
     useEffect(() => {
         DrawChart(data)
-    },[])
+    }, [])
 
     function DrawChart(data) {
         var margin = { top: 20, right: 25, bottom: 30, left: 40 },
             width = 650 - margin.left - margin.right,
             height = 450 - margin.top - margin.bottom;
-        var svg = d3.select("#div_template")
+        var svg = d3.select("#chart")
             .append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
@@ -64,10 +64,10 @@ const BarChart = () => {
 
         svg.append('g')
             .attr('transform', 'translate(' + margin.left + ',0)')
-            .call(d3.axisLeft(y).tickFormat(d => d + " €"))
+            .call(d3.axisLeft(y).tickFormat(d => `${d} €`))
             .select(".domain").remove()
 
-        var Tooltip = d3.select("#div_template")
+        var Tooltip = d3.select("#chart")
             .append("div")
             .style("visibility", "hidden")
             .style("position", "absolute")
@@ -90,14 +90,15 @@ const BarChart = () => {
         }
         var mousemove = function (event, d) {
             const leftPosition = event.pageX
+            console.log(leftPosition)
             const topPosition = event.pageY
             Tooltip
                 .html(`
                     <div>Total:<span>${d.quantity} €</span></div>
                     <div>Initial invest:<span>${d.quantity} €</span></div>
                     <div>Growth:<span>${d.quantity / 100} %</span></div>`)
-                .style("left", leftPosition + "px")
-                .style("top", topPosition + "px")
+                .style("left", `${leftPosition}px`)
+                .style("top", `${topPosition}px`)
 
         }
         var mouseleave = function (d) {
@@ -119,7 +120,7 @@ const BarChart = () => {
             .attr('height', d => y(0) - y(d.quantity))
             .attr('width', x.bandwidth())
             .attr('fill', function (d) {
-                return colorPicker(d); 
+                return colorPicker(d);
             })
             .style("stroke-width", 1)
             .style("stroke", "none")
@@ -134,7 +135,7 @@ const BarChart = () => {
             .data(data)
             .enter()
             .append("text")
-            .text((d) => d.quantity + " €")
+            .text((d) => `${d.quantity} €`)
             .attr('x', (d, i) => x(i) + 30)
             .attr('y', d => y(d.quantity) - 10)
 
@@ -147,7 +148,7 @@ const BarChart = () => {
             <div className="title">
                 | Your products
             </div>
-            <div id="div_template">
+            <div id="chart">
 
             </div>
         </div>
