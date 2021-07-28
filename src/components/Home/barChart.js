@@ -54,7 +54,7 @@ const BarChart = () => {
 
         svg.append('g')
             .attr('transform', 'translate(0,' + height + ')')
-            .call(d3.axisBottom(x).tickFormat(i => data[i].category).tickSizeOuter(0))
+            .call(d3.axisBottom(x).tickFormat(i => data[i].category).tickSize(15))
             .style("font-size","14px")
             .style("font-family","Roboto")
 
@@ -67,7 +67,7 @@ const BarChart = () => {
 
         svg.append('g')
             .attr('transform', 'translate(' + margin.left + ',0)')
-            .call(d3.axisLeft(y).tickFormat(d => `${d} €`))
+            .call(d3.axisLeft(y).tickFormat(d => `${d} €`).tickSize(15))
             .style("font-size","14px")
             .style("font-family","Roboto")
 
