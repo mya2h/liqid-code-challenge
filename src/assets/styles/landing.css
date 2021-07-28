@@ -29,9 +29,9 @@
 .col2 h3 {
   font: italic normal 300 1.5em/1.8em Roboto;
   color: #ef233c;
-  padding-left: 16px;
-  padding-right: 2px;
-  padding-top: 10px;
+  padding-left: 10%;
+  border-left: 1px solid;
+  margin-left: 20%;
 }
 .col2 p {
   font: normal normal 300 1em/1.5em Roboto;
@@ -61,6 +61,8 @@
 .col1content h2 {
   font: italic normal 300 1.5em/1.7em Roboto;
   color: #ffffff;
+  border-left: 1px solid;
+  padding-left: 2%;
 }
 .col1content p {
   font: normal normal 300 16px/24px Roboto;
@@ -78,6 +80,11 @@
   }
   .stock {
     border-radius: 0 0 0 24px;
+    padding-top: 2%;
+  }
+  .investments {
+    margin-top: 5%;
+    padding-top: 2%;
   }
 
   .hidenrow {
@@ -91,6 +98,7 @@
     color: #ef233c;
     padding-left: 16px;
     padding-right: 2px;
+    top: 20px;
   }
   .col2 p {
     font: normal normal 300 16px/24px Roboto;

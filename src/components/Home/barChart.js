@@ -37,7 +37,7 @@ const BarChart = () => {
 
     const DrawChart = (data) => {
         var margin = { top: 20, right: 25, bottom: 30, left: 40 },
-            width = 650 - margin.left - margin.right,
+            width = 800 - margin.left - margin.right,
             height = 450 - margin.top - margin.bottom;
         var svg = d3.select("#chart")
             .append("svg")
@@ -50,11 +50,13 @@ const BarChart = () => {
         const x = d3.scaleBand()
             .domain(d3.range(data.length))
             .range([margin.left, width - margin.right])
-            .padding(0.1)
+            .padding(0.2)
 
         svg.append('g')
             .attr('transform', 'translate(0,' + height + ')')
             .call(d3.axisBottom(x).tickFormat(i => data[i].category).tickSizeOuter(0))
+            .style("font-size","14px")
+            .style("font-family","Roboto")
 
 
         const max = d3.max(data, function (d) { return d.quantity + 80 })
@@ -67,6 +69,8 @@ const BarChart = () => {
             .attr('transform', 'translate(' + margin.left + ',0)')
             .call(d3.axisLeft(y).tickFormat(d => `${d} €`))
             .select(".domain").remove()
+            .style("font-size","14px")
+            .style("font-family","Roboto")
 
         var Tooltip = d3.select("#chart")
             .append("div")
@@ -114,8 +118,6 @@ const BarChart = () => {
             .append("rect")
             .attr('x', (d, i) => x(i))
             .attr('y', d => y(d.quantity))
-            .attr("rx", 4)
-            .attr("ry", 4)
             .attr('height', d => y(0) - y(d.quantity))
             .attr('width', x.bandwidth())
             .attr('fill', function (d) {
@@ -137,6 +139,8 @@ const BarChart = () => {
             .text((d) => `${d.quantity} €`)
             .attr('x', (d, i) => x(i) + 30)
             .attr('y', d => y(d.quantity) - 10)
+            .style("font-size","14px")
+            .style("font-family","Roboto")
 
 
     }
@@ -144,11 +148,13 @@ const BarChart = () => {
     return (
 
         <div className="content">
+            <div>
             <div className="title">
-                | Your products
+            Your products
             </div>
             <div id="chart">
 
+            </div>
             </div>
         </div>
 

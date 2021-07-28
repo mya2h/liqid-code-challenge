@@ -7,7 +7,7 @@ const Landing = () => {
             <div class="column col1">
                 <div className="col1content">
                     <h2>
-                        | Welcome to your personal area.
+                        Welcome to your personal area.
                     </h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Mauris fermentum elit id auctor mollis. Aenean feugiat commodo quam, vulputate viverra lorem iaculis in. Curabitur varius commodo lacus eget vestibulum. Curabitur vitae risus nec justo faucibus vulputate. Nunc blandit nisi lobortis, gravida elit non, tincidunt dolor. Mauris ullamcorper suscipit risus, eget dictum dui consequat sed. Nam quis orci id dui consectetur elementum.
@@ -19,7 +19,7 @@ const Landing = () => {
                     <div className="investments">
                         <div>
                             <h3>
-                                | Investments
+                               Investments
                             </h3>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fermentum elit id auctor mollis. Aenean feugiat commodo quam, vulputate viverra lorem iaculis in. Curabitur varius commodo
@@ -30,7 +30,7 @@ const Landing = () => {
                     <div className="stock">
                         <div>
                             <h3>
-                                | Stocks
+                                Stocks
                             </h3>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fermentum elit id auctor mollis.

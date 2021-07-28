@@ -4,21 +4,29 @@
   text-align: center;
   display: block;
   padding: 2%;
+}
+.content div {
   overflow-x: auto;
 }
 .tooltip {
   flex-direction: column;
-  font: normal 300 16px/21px Roboto;
+  font: bold 300 16px/21px Roboto;
+  padding: 1%;
+  text-align: left;
 }
 .tooltip span {
   color: #1eb3ae;
   float: right;
+  font-weight: normal;
 }
 .title {
   font: italic normal 300 25px/33px Roboto;
   color: #ef233c;
+  border-left: 1px solid;
+  width: 200px;
   align-self: center;
-  padding-top: 1%;
+  margin-left: 40%;
+  margin-top: 10px;
 }
 
 @media screen and (max-width: 599px) {

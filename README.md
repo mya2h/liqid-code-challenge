@@ -4,7 +4,7 @@
 
 ### Install NodeJS
 Refer to https://nodejs.org/en/ to install NodeJS
-### Install create-react-app
+### Install create-react-app (optional)
 Install create-react-app npm package globally. This will help to easily run the project and also build the source files easily. Use the following command to install create-react-app
 
 ```bash
@@ -64,3 +64,5 @@ https://github.com/facebook/create-react-app
 **React-icons**: Refer to https://react-icons.github.io/react-icons/ for react icons
 
 **D3.js**: Refer to https://d3js.org/ to understand the concepts of D3.js and https://www.educative.io/blog/d3js-tutorial for more
+
+**CSS**: Refer to https://developer.mozilla.org/en-US/docs/Web/CSS to understand more on css
